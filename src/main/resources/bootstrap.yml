@@ -1,0 +1,16 @@
+server:
+  port: ${PORT:7788}
+spring:
+  application:
+    name: codeploy
+  profiles:
+    active: prod
+  cloud:
+    nacos:
+      username: ${NACOS_USERNAME:nacos}
+      password: ${NACOS_PWD:123456}
+      discovery:
+        serverAddr: server.banip.top:38848
+      config:
+        serverAddr: server.banip.top:38848
+        file-extension: yaml
